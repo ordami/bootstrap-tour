@@ -1,5 +1,5 @@
 /* ========================================================================
- * bootstrap-tour - v0.11.0
+ * bootstrap-tour - v0.12.0
  * http://bootstraptour.com
  * ========================================================================
  * Copyright 2012-2015 Ulrich Sossou
@@ -696,7 +696,7 @@ var bind = function(fn, me){ return function(){ return fn.apply(me, arguments); 
       height = $element.outerHeight();
       windowHeight = $window.height();
       scrollTop = 0;
-      switch (step.placement) {
+      switch (step.placement.replace('auto', '').trim()) {
         case 'top':
           scrollTop = Math.max(0, offsetTop - (windowHeight / 2));
           break;
